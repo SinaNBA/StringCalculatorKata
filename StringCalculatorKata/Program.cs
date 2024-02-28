@@ -9,7 +9,8 @@ namespace StringCalculatorKata
             Console.WriteLine($"The sum is(with ',') for step1: {Add("1,2,3")}");
             Console.WriteLine($"The sum is(with ',')for step3: {Add("1,\n2,3")}");
             Console.WriteLine($"The sum is(with ',')for step4: {Add("//;\n1;2")}");
-            Console.WriteLine($"The sum is(with ',')for step4: {Add("//;\n1;2;-1;-2;-3")}");
+            //Console.WriteLine($"The sum is(with ',')for step5: {Add("//;\n1;2;-1;-2;-3")}");
+            Console.WriteLine($"The sum is(with ',')for step6: {Add("//;\n1;2;1001;1002")}");
         }
         private static int Add(string numbersString)
         {
@@ -33,7 +34,9 @@ namespace StringCalculatorKata
                 throw new Exception($"negatives not allowed, the negative numbers is: {string.Join(',',negatives)}");
             }
 
-            return numbers.Sum(int.Parse);
+            //to ignore numbers bigger than 1000
+            var numbersToSum=numbers.Where(num=>int.Parse(num) <= 1000).ToList();
+            return numbersToSum.Sum(int.Parse);
         }
 
     }
