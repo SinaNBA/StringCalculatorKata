@@ -13,6 +13,7 @@ namespace StringCalculatorKata
             Console.WriteLine($"The sum is(with ',')for step6: {Add("//;\n1;2;1001;1002")}");
             Console.WriteLine($"The sum is(with ',')for step7: {Add("//[***]\n1***2***3")}");
             Console.WriteLine($"The sum is(with ',')for step8: {Add("//[*][%]\n1*2%3")}");
+            Console.WriteLine($"The sum is(with ',')for step9: {Add("//[***][%%%]\n1***2%%%3")}");
         }
         private static int Add(string numbersString)
         {
